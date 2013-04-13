@@ -1,3 +1,4 @@
+colorscheme zenburn
 syntax on
 imap jk <Esc>
 ino <down> <Nop>
