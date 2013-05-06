@@ -29,3 +29,5 @@ HISTSIZE=3000
 SAVEHIST=3000
 HISTFILE=~/.history
 setopt "HIST_IGNORE_ALL_DUPS"
+
+source /etc/zsh_command_not_found

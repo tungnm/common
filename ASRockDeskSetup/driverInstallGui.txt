@@ -1,0 +1,16 @@
+clean driver:
+sudo apt-get remove --purge fglrx fglrx_* fglrx-amdcccle* fglrx-dev*
+sudo apt-get remove --purge xserver-xorg-video-ati xserver-xorg-video-radeon
+sudo dpkg-reconfigure xserver-xorg
+
+then install:
+sudo chmod 755 ./amd-driver-installer-12.run
+sudo ./amd-driver-installer-12.run
+
+if  say old version found after running clean driver above, then add "--force" at the end of the command above
+
+after install:
+sudo aticonfig --initial
+
+to check if openGL work now:
+/usr/lib/nux/unity_support_test -p
