@@ -9,3 +9,5 @@ echo "If no error found above, please restart to use zsh"
 
 git config --global core.editor vim
 git config --global merge.tool vimdiff
+chsh -s /bin/zsh
+echo "changed to zsh shell, please log out and log in again"
