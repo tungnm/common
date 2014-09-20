@@ -11,6 +11,7 @@ alias grep='grep --color=auto'
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'
+# for macOS, change the line below to alias ls='ls -G'
 alias ls='ls --color=auto'
 # history setup
 HISTSIZE=3000
