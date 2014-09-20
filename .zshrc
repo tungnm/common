@@ -1,20 +1,8 @@
 autoload -U compinit
+
 #allow tab completion in the middle of a word
 setopt COMPLETE_IN_WORD
- #Adding Eclipse bin to $PATH
- export PATH=~/Desktop/android-sdk-linux/platform-tools:~/Desktop/apache-ant-1.9.0/bin:/apollo/env/eclipse-3.7/bin:$PATH
  echo 'Hello World, this is ~/.zshrc file'
- alias bR='brazil-build apollo-pkg'
- 
- function go
- {
-	 clear
-	 dirs -v
-	 echo -n "Which Folder? :"
-	 read selection
-	 pushd +$selection > /dev/null
-	 pwd
- }
 
 # alias to have coloured output for ls, grep
 alias egrep='egrep --color=auto'
@@ -31,3 +19,5 @@ HISTFILE=~/.history
 setopt "HIST_IGNORE_ALL_DUPS"
 
 source /etc/zsh_command_not_found
+# support for tmux to have 256 color
+[ -z "$TMUX" ] && export TERM=xterm-256color
