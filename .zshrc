@@ -1,5 +1,6 @@
 autoload -U compinit
-
+# good doc on bash if then
+# https://www.gnu.org/software/bash/manual/bashref.html#Bash-Conditional-Expressions
 #allow tab completion in the middle of a word
 setopt COMPLETE_IN_WORD
  echo 'Hello World, this is ~/.zshrc file'
@@ -14,8 +15,8 @@ alias ll='ls -alF'
 # for macOS, change the line below to alias ls='ls -G'
 alias ls='ls --color=auto'
 # history setup
-HISTSIZE=3000
-SAVEHIST=3000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.history
 setopt "HIST_IGNORE_ALL_DUPS"
 
