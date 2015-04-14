@@ -14,7 +14,8 @@ alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'
 
-if [ "$thisOS" == "Darwin" ]; then
+#this is the correct way to test a variable equal a string
+if test "$thisOS" = "Darwin" 
     echo MAC OS system detected
     alias ls='ls -G'
 else
