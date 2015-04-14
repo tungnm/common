@@ -1,4 +1,6 @@
-colorscheme zenburn
+colorscheme solarized
+" set dark solarzied theme instead of light
+set background=dark
 syntax on
 imap jk <Esc>
 ino <down> <Nop>
@@ -54,3 +56,4 @@ execute "set <xRight>=\e[1;*C"
 execute "set <xLeft>=\e[1;*D"
 endif
 
+set t_Co=256
