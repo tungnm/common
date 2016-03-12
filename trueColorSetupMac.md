@@ -1,6 +1,9 @@
 # 24 bit true color terminal setup
 
 
+//test using the concealed texted: *concealed text*
+
+
 Do the following:
 * install zsh and oh-my-zsh as usual.
 * copy over the .zshrc file to ~/.zshrc
@@ -38,9 +41,6 @@ cp mustard.vim ~/.vim/colors/
 ```
 
 Install vim plug and use vim plug to install vim pencil
-
-
-asdfjasdf asdf asd fa sdf asd fa dsfas dfas df asd fas df asf asd f asdf asdf asdf asd fasdf asdf asdf asdf asdf 
 
 ## Reference
 https://chris.chowie.net/2015/04/19/True-colour-with-neovim-tmux-and-iterm2/

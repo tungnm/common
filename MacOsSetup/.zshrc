@@ -15,6 +15,8 @@ prompt pure
 
 ZSH_THEME="pure"
 
+
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -92,3 +94,33 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
 alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+
+#
+# ---------------------use vim mode for shell:
+bindkey -v 
+vim_ins_mode="[INS]"
+vim_cmd_mode="[CMD]"
+vim_mode=$vim_ins_mode
+
+function zle-keymap-select {
+  vim_mode="${${KEYMAP/vicmd/${vim_cmd_mode}}/(main|viins)/${vim_ins_mode}}"
+  zle reset-prompt
+}
+zle -N zle-keymap-select
+
+function zle-line-finish {
+  vim_mode=$vim_ins_mode
+}
+zle -N zle-line-finish
+
+RPROMPT='${vim_mode}'
+
+
+function TRAPINT() {
+  vim_mode=$vim_ins_mode
+  return $(( 128 + $1 ))
+}
+# don't display RPROMPT for previously accepted lines; only display it next to current line
+setopt transient_rprompt
+bindkey -M viins 'jk' vi-cmd-mode
+# ------------------- end of use vim mode for shell
