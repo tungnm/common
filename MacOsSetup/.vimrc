@@ -1,5 +1,7 @@
 colorscheme mustard 
 set background=dark
+" yank vim into clipboard
+set clipboard=unnamed
 syntax on
 imap jk <Esc>
 ino <down> <Nop>
@@ -67,6 +69,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif                                                                                                                                 
 call plug#begin('~/.config/nvim/plugged')    
 Plug 'reedes/vim-pencil'
+Plug 'tpope/vim-markdown'
 call plug#end()
 
 " setting for markdown file:
@@ -74,7 +77,7 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " pencil set up
 set nocompatible
 filetype plugin on       " may already be in your .vimrc
-
+let g:pencil#conceallevel = 3
 let g:pencil#textwidth = 120 
 augroup pencil
   autocmd!
